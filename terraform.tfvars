@@ -1,0 +1,6 @@
+rg_location     = "centralindia"
+rg_name         = "TestRGvar"
+log_name = "contlog"
+app_env = "contenv"
+cont_app = "contapp"
+image_name = "amitsingh01/djangoecom:36"
