@@ -39,6 +39,8 @@ workflows:
       - terraform-apply
       - destroy-approval:
           type: approval
+          requires:
+            - terraform-apply
       - terraform-destroy:
           requires:
             - destroy-approval
