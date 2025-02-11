@@ -3,6 +3,14 @@ provider "azurerm" {
   features {}
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "tfbackend"
+    storage_account_name  = "azcontappbackend"
+    container_name        = "tfbackend"
+    key                   = "terraform.tfstate"  
+  }
+}
 #Creating RG
 resource "azurerm_resource_group" "my_rg" {
   name     = var.rg_name
