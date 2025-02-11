@@ -19,13 +19,7 @@ jobs:
       - run:
           name: Terraform Apply
           command: terraform apply -auto-approve
-
-  destroy-approval:
-    steps:
-      - run:
-          name: waiting for approval
-          command: echo "waiting for approval" 
-  
+          
   terraform-destroy:
     executor: terraform
     steps:
