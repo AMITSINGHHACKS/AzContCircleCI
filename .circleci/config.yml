@@ -17,6 +17,9 @@ jobs:
           name: Terraform Plan
           command: terraform plan
       - run:
+          name: Halt for approval
+          command: circleci-agent step halt
+      - run:
           name: Terraform Apply
           command: terraform apply -auto-approve
 
